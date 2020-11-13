@@ -1,11 +1,10 @@
 {
-    "title": "微信开发sdk文档",
+    "title": "kubernetes笔记",
     "author": "silenceper",
-    "description": "微信开发SDK文档，包含微信公众平台，小程序，开放平台，微信支付等相关API",
+    "description": "kubernets笔记",
     "links": {
         "sidebar": {
-            "获取SDK": "https://github.com/silenceper/wechat",
-            "上报问题": "https://github.com/silenceper/wechat/issues"
+            "上报问题": "https://github.com/silenceper/kubernetes-book/issues"
         }
     },
     "plugins": [
@@ -19,24 +18,24 @@
     ],
     "pluginsConfig": {
         "github": {
-            "url": "https://github.com/silenceper/wechat"
+            "url": "https://github.com/silenceper/kubernetes-book"
         },
         "github-buttons": {
             "buttons": [
                 {
                     "user": "silenceper",
-                    "repo": "wechat",
+                    "repo": "kubernetes-book",
                     "type": "star",
                     "size": "small"
                 }
             ]
         },
         "edit-link": {
-            "base": "https://github.com/gowechat/docs/blob/master",
+            "base": "https://github.com/silenceper/kubernetes-book/blob/master",
             "label": "更新该页"
         },
         "tbfed-pagefooter": {
-            "copyright": "Copyright &copy Wechat SDK For Go 2020",
+            "copyright": "Copyright &copy silenceper 2020",
             "modify_label": "该文件修订时间：",
             "modify_format": "YYYY-MM-DD HH:mm:ss"
         },
