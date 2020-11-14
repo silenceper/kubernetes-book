@@ -1,4 +1,4 @@
-# kubernetes-book
+# kubernetes book
 关于kubernetes以及周边生态组件的笔记。
 
 > 并不会短时间内完成，更倾向于在实践的过程中的总结。

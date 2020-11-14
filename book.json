@@ -3,9 +3,7 @@
     "author": "silenceper",
     "description": "kubernets笔记",
     "links": {
-        "sidebar": {
-            "上报问题": "https://github.com/silenceper/kubernetes-book/issues"
-        }
+        "sidebar": {}
     },
     "plugins": [
         "github-buttons",
@@ -31,7 +29,7 @@
             ]
         },
         "edit-link": {
-            "base": "https://github.com/silenceper/kubernetes-book/blob/master",
+            "base": "https://github.com/silenceper/kubernetes-book/blob/main",
             "label": "更新该页"
         },
         "tbfed-pagefooter": {
