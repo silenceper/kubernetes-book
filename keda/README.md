@@ -10,7 +10,7 @@ keda是一个基于事件驱动的伸缩控制器，可以实现应用缩容至0
 
 **KEDA架构图**：
 
-<img src="https://silenceper.oss-cn-beijing.aliyuncs.com/images/keda-arch.png" alt="keda架构图" style="zoom: 33%;" />
+<img src="https://silenceper.oss-cn-beijing.aliyuncs.com/images/keda-arch.png" alt="keda架构图" style="zoom: 50%;" />
 
 
 
