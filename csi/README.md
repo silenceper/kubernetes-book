@@ -160,8 +160,8 @@ service Node {
 - **livenessprobe**
 
   它是一个sidecar容器，用于监视CSI驱动程序的运行状况，并通过[Liveness Probe机制](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/)将其报告给Kubernetes。 这使Kubernetes能够自动检测驱动程序问题并重新启动Pod以尝试解决问题。
-
-
+  
+  
 
 ## 参考
 
