@@ -551,8 +551,8 @@ CSINode
 - `csi-provisioner`组件监听pvc的创建，从而通过 CSI socket 创建 [CreateVolumeRequest](https://github.com/container-storage-interface/spec/blob/master/spec.md#createvolume) 请求至`CreateVolume`方法
 - `csi-provisioner`创建 PV 以及更新 PVC状态至  bound ，从而由 controller-manager创建`VolumeAttachment`对象
 - `csi-attacher` 监听`VolumeAttachments` 对象创建，从而调用[ ControllerPublishVolume](https://github.com/container-storage-interface/spec/blob/master/spec.md#controllerpublishvolume) 方法。
-- `kubelet`一直都在等待volume attach， 从而调用 [NodeStageVolume](https://github.com/container-storage-interface/spec/blob/master/spec.md#nodestagevolume) *(主要做格式化以及mount到节点上一个全局目录) 方法 - 这一步可选
-- CSI Driver在 在 [NodeStageVolume](https://github.com/container-storage-interface/spec/blob/master/spec.md#nodestagevolume) 方法中将volumemount到 `/var/lib/kubelet/plugins/kubernetes.io/csi/pv/<pv-name>/globalmount`这个目录并放回kubelet
+- `kubelet`一直都在等待volume attach， 从而调用 [NodeStageVolume](https://github.com/container-storage-interface/spec/blob/master/spec.md#nodestagevolume) (主要做格式化以及mount到节点上一个全局目录) 方法 - *这一步可选*
+- CSI Driver在 在 [NodeStageVolume](https://github.com/container-storage-interface/spec/blob/master/spec.md#nodestagevolume) 方法中将volumemount到 `/var/lib/kubelet/plugins/kubernetes.io/csi/pv/<pv-name>/globalmount`这个目录并返回给kubelet - *这一步可选*
 - `kubelet`调用[NodePublishVolume](https://github.com/container-storage-interface/spec/blob/master/spec.md#nodepublishvolume) (挂载到pod目录通过`mount bind`)
 - CSI Driver相应[ NodePublishVolume](https://github.com/container-storage-interface/spec/blob/master/spec.md#nodepublishvolume) 请求，将volume挂载到pod目录 `/var/lib/kubelet/pods/<pod-uuid>/volumes/[kubernetes.io](http://kubernetes.io/)~csi/<pvc-name>/mount`
 - 最后，kubelet启动容器
